@@ -6,7 +6,7 @@ import { experienceData } from "../util/experienceData";
 export const WorkExperience = () => {
   return (
     <section
-      className="container mx-auto px-4 sm:px-6 md:px-10 py-12"
+      className="container mx-auto"
       aria-labelledby="work-experience-heading"
     >
       <h2
@@ -58,7 +58,9 @@ export const WorkExperience = () => {
                   aria-label={`Achievements at ${experience.company}`}
                 >
                   {experience.achievements.map((achievement, idx) => (
-                    <li key={experience.company + "-achv-" + idx}>{achievement}</li>
+                    <li key={experience.company + "-achv-" + idx}>
+                      {achievement}
+                    </li>
                   ))}
                 </ul>
               )}

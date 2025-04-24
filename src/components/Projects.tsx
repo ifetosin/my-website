@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 export const Projects = () => {
   return (
     <section
-      className="container mx-auto px-4 sm:px-6 md:px-10 py-12"
+      className="container mx-auto"
       aria-labelledby="projects-heading"
     >
       <h1

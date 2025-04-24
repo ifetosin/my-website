@@ -68,14 +68,8 @@ export default function PortfolioPage() {
           property="og:image"
           content="/images/portfolio-image.jpg" // Make sure to replace this with an actual image URL
         />
-        <meta
-          property="og:url"
-          content="https://ifeoluwatosin.netlify.app/"
-        />
-        <link
-          rel="canonical"
-          href="https://ifeoluwatosin.netlify.app/"
-        />
+        <meta property="og:url" content="https://ifeoluwatosin.netlify.app/" />
+        <link rel="canonical" href="https://ifeoluwatosin.netlify.app/" />
         {/* Preload critical fonts */}
         <link
           rel="preload"
@@ -113,20 +107,25 @@ export default function PortfolioPage() {
             isNavOpen ? "ml-70" : "ml-0"
           }`}
         >
-          {/* Add IDs to sections for smooth scrolling */}
-          <section id="hero">
+          <section id="hero" className="px-4 pt-8 md:px-9 2xl:px-0 md:pt-16 lg:pt-30 lg:pb-20">
             <Hero />
           </section>
-          <section id="projects">
+          <section
+            id="projects"
+            className="px-4 pt-8 md:px-9 2xl:px-0 md:pt-16"
+          >
             <Projects />
           </section>
-          <section id="skills">
+          <section id="skills" className="px-4 pt-8 md:px-9 2xl:px-0 md:pt-16">
             <Skills />
           </section>
-          <section id="work-experience">
+          <section
+            id="work-experience"
+            className="px-4 pt-8 md:px-9 2xl:px-0 md:pt-16"
+          >
             <WorkExperience />
           </section>
-          <section id="contact">
+          <section id="contact" className="px-4 pt-8 md:px-92xl:px-0 md:pt-16">
             <ContactFooter />
           </section>
         </main>

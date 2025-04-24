@@ -15,12 +15,12 @@ export const ContactFooter = () => {
 
   return (
     <footer
-      className="py-8 px-6 mt-12 relative"
+      className="mt-12 relative"
       style={{
         borderTop: "2px solid var(--theme-border-color)", // Apply dynamic theme color
       }}
     >
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-left gap-4 md:gap-6 text-left md:text-left">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-left gap-4 md:gap-6 text-left md:text-left mt-8 mb-5">
         {/* Social Icons */}
         <div className="flex justify-start space-x-6 text-2xl">
           <a
