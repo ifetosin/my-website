@@ -7,11 +7,10 @@ body {
   margin: 0;
   padding: 0;
   background: var(--background);
-  color: #333333; 
-  font-family: var(--font-family); 
+  color: #333333;
+  font-family: var(--font-family);
   overflow-x: hidden;
 }
-
 
 /* Global Navbar Styling */
 .navbar {
@@ -20,42 +19,43 @@ body {
   z-index: 50;
   color: var(--foreground);
   background-color: var(--theme-navbar-background);
-  box-shadow: var(--theme-navbar-shadow); 
+  box-shadow: var(--theme-navbar-shadow);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+  a {
+    cursor: pointer;
+  }
 }
 
 .favicon {
-  color: #333333; 
+  color: #333333;
 }
-
 
 html,
 body {
   transition: background-color 0.3s ease, color 0.3s ease, font-family 0.3s ease;
 }
 
-
 html.theme-default {
   background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-family);
   --theme-border-color: #81d4fa;
-  --theme-shadow:  0 0 0 2px rgba(129, 212, 250, 0.4);
-  --theme-navbar-background: #fffff; 
+  --theme-shadow: 0 0 0 2px rgba(129, 212, 250, 0.4);
+  --theme-navbar-background: #fffff;
   --theme-navbar-shadow: 0px 4px 8px rgba(129, 212, 250, 0.4);
   --font-family: "Montserrat", sans-serif;
 }
 
 html.theme-default button {
   background-color: #faf9f6;
-  color: #01579b; 
+  color: #01579b;
   border: 1px solid #81d4fa;
   padding: 8px 16px;
   border-radius: 4px;
   transition: background-color 0.3s ease, transform 0.2s ease;
   cursor: pointer;
 }
-
 
 html.theme-default button:hover {
   background-color: #e3e3e3; /* Subtle hover effect */
@@ -87,7 +87,7 @@ html.theme-dark p,
 html.theme-dark span,
 html.theme-dark div,
 html.theme-dark .navbar {
-  color: #EAEAEA; /* Ensure headers are readable and distinct */
+  color: #eaeaea; /* Ensure headers are readable and distinct */
 }
 
 html.theme-dark button {
@@ -136,19 +136,33 @@ html.theme-buoyant {
   color: #0288d1;
   font-family: "Playfair_Display", sans-serif;
   --theme-border-color: #90caf9;
-  --theme-shadow:  0 0 0 2px rgba(144, 202, 249, 0.4);
-  --theme-navbar-background: #d7ebfd; 
-  --theme-navbar-shadow: 0px 4px 8px rgba(144, 202, 249, 0.4); 
+  --theme-shadow: 0 0 0 2px rgba(144, 202, 249, 0.4);
+  --theme-navbar-background: #d7ebfd;
+  --theme-navbar-shadow: 0px 4px 8px rgba(144, 202, 249, 0.4);
+}
+
+html.theme-buoyant button {
+  background-color: #0288d1;
+  color: #e3f2fd;
+  border: 1px solid #d7ebfd;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+html.theme-buoyant button:hover {
+  background-color: 0 0 0 2px rgba(144, 202, 249, 0.4);;
 }
 
 /* Orange Theme */
 html.theme-orange {
-  background-color: #fff3e0; 
+  background-color: #fff3e0;
   color: #e65100;
   font-family: "Lato", sans-serif;
   --theme-border-color: #ffb74d;
-  --theme-navbar-background: #ffe5cc; 
-  --theme-navbar-shadow: 0px 4px 8px rgba(255, 183, 77, 0.4); 
+  --theme-navbar-background: #ffe5cc;
+  --theme-navbar-shadow: 0px 4px 8px rgba(255, 183, 77, 0.4);
 }
 
 html.theme-orange button {
@@ -167,13 +181,13 @@ html.theme-orange button:hover {
 
 /* Purple Theme */
 html.theme-purple {
-  background-color: #f3e5f5; 
+  background-color: #f3e5f5;
   color: #4a148c;
   font-family: "Poppins", sans-serif;
   --theme-border-color: #ba68c8;
-  --theme-shadow:  0 0 0 2pxx rgba(186, 104, 200, 0.4);
-  --theme-navbar-background: #f1e4f8; 
-  --theme-navbar-shadow: 0px 4px 8px rgba(186, 104, 200, 0.4); 
+  --theme-shadow: 0 0 0 2pxx rgba(186, 104, 200, 0.4);
+  --theme-navbar-background: #f1e4f8;
+  --theme-navbar-shadow: 0px 4px 8px rgba(186, 104, 200, 0.4);
 }
 
 html.theme-purple button {
@@ -220,7 +234,7 @@ html.theme-purple .theme-highlight {
 }
 
 .custom-bullet::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0.4em; /* Aligns with first line text */
@@ -243,10 +257,8 @@ html.theme-purple .theme-highlight {
   animation: spin 1s linear infinite;
 }
 
-
 @media screen and (max-width: 768px) {
-  .nav-icon{
+  .nav-icon {
     display: none;
   }
 }
-

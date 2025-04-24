@@ -6,10 +6,13 @@ import { motion } from "framer-motion";
 
 export const Projects = () => {
   return (
-    <section className="container mx-auto px-2 lg:px-10 py-12" aria-labelledby="projects-heading">
+    <section
+      className="container mx-auto px-4 sm:px-6 md:px-10 py-12"
+      aria-labelledby="projects-heading"
+    >
       <h1
         id="projects-heading"
-        className="text-2xl sm:text-3xl font-bold text-left mb-6 md:mb-12"
+        className="text-2xl sm:text-3xl md:text-4xl font-bold mb-10 text-left"
       >
         Some Projects
       </h1>
@@ -71,13 +74,13 @@ export const Projects = () => {
                 </motion.span>
               </div>
 
-              <p className="mb-8 text-gray-700">{project.description}</p>
+              <p className="mb-8">{project.description}</p>
 
               <div className="flex flex-wrap" aria-label="Technology stack">
                 {project.stack.map((tech, i) => (
                   <motion.span
                     key={tech.name + i}
-                    className="px-3 py-2 mr-2 mb-2 rounded-lg shadow-md text-sm bg-gray-100"
+                    className="px-3 py-2 mr-2 mb-2 rounded-lg shadow-md text-sm"
                     initial={{ scale: 0.8, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
                     transition={{ duration: 0.6, delay: i * 0.2 }}

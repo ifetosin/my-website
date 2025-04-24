@@ -110,7 +110,7 @@ export default function PortfolioPage() {
         {/* Main Content */}
         <main
           className={`flex-1 transition-all duration-200 ${
-            isNavOpen ? "ml-64" : "ml-0"
+            isNavOpen ? "ml-70" : "ml-0"
           }`}
         >
           {/* Add IDs to sections for smooth scrolling */}

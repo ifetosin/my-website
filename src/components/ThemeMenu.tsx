@@ -28,15 +28,15 @@ export const ThemeMenu = forwardRef<HTMLDivElement, ThemeMenuProps>(
           zIndex: "50",
         }}
       >
-        <h2 className="text-lg font-bold mb-2 theme-navbar-background">
+        <h2 className="text-lg font-bold mb-2 theme-boder-color">
           Choose Theme
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
           {themes.map(({ name, theme: t }) => (
             <button
               key={t}
-              onClick={() => onThemeSelect(t)} // Pass the selected theme to the parent function
-              className="text-sm font-medium p-2 rounded-md theme-highlight"
+              onClick={() => onThemeSelect(t)}
+              className="text-sm font-medium p-2 rounded-md"
             >
               {name}
             </button>

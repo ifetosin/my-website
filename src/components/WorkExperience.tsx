@@ -6,7 +6,6 @@ import { experienceData } from "../util/experienceData";
 export const WorkExperience = () => {
   return (
     <section
-      id="work-experience"
       className="container mx-auto px-4 sm:px-6 md:px-10 py-12"
       aria-labelledby="work-experience-heading"
     >
@@ -49,7 +48,7 @@ export const WorkExperience = () => {
                 </div>
               </div>
 
-              <p className="text-sm sm:text-base font-normal text-justify mb-4">
+              <p className="text-sm sm:text-base font-normal md:text-justify mb-4">
                 {experience.description}
               </p>
 
