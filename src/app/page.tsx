@@ -1,4 +1,4 @@
-
+/* eslint-disable @next/next/google-font-preconnect */
 "use client";
 import { useState, useEffect } from "react";
 import { FaBars } from "react-icons/fa"; // Import a better icon for the navbar toggle
@@ -56,42 +56,54 @@ export default function PortfolioPage() {
         />
         <meta
           name="keywords"
-          content="portfolio, web development, React, Next.js, JavaScript, skills, projects, front end development, front end, software engineering, developer"
+          content="portfolio, web development, React, Next.js, JavaScript, skills, projects, front end development, software engineering, developer"
         />
+        <meta name="author" content="Ife Oluwatosin" />
         <meta property="og:title" content="Ife Oluwatosin Portfolio" />
         <meta
           property="og:description"
           content="Explore my portfolio to learn more about my work and skills."
         />
-        <meta property="og:image" content="URL_TO_IMAGE" />
+        <meta
+          property="og:image"
+          content="/images/portfolio-image.jpg" // Make sure to replace this with an actual image URL
+        />
         <meta
           property="og:url"
-          content="https://https://ifeoluwatosin.netlify.app/"
+          content="https://ifeoluwatosin.netlify.app/"
         />
         <link
           rel="canonical"
-          href="https://https://ifeoluwatosin.netlify.app/"
+          href="https://ifeoluwatosin.netlify.app/"
+        />
+        {/* Preload critical fonts */}
+        <link
+          rel="preload"
+          href="https://fonts.gstatic.com"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
         />
       </Head>
       <div className="max-w-screen-xl mx-auto px-2 md:px-10">
-        <div className="relative">
+        <header>
           {/* Navbar Toggle Icon */}
           {!isNavOpen && (
             <div
               className="nav-icon fixed top-4 left-4 z-50 p-4 rounded-full shadow-lg cursor-pointer transition hover:scale-105"
               style={{
-                backgroundColor: "theme-navbar-background",
+                backgroundColor: "var(--theme-navbar-background)",
               }}
               onClick={() => setIsNavOpen(true)} // Opens the navbar
+              aria-label="Open Navigation"
             >
-              <FaBars className="theme-highlight text-2xl" />{" "}
-              {/* Updated to use FaBars */}
+              <FaBars className="theme-highlight text-2xl" />
             </div>
           )}
 
           {/* Sidebar Navbar */}
           <Navbar isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
-        </div>
+        </header>
 
         <ThemeToggleButton />
 

@@ -6,95 +6,81 @@ import { FaLinkedin, FaEnvelope, FaGithub } from "react-icons/fa";
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-auto">
+    <section
+      className="relative min-h-auto"
+      aria-labelledby="hero-heading"
+      role="region"
+    >
       <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 md:px-10">
-        <div className="hero block md:flex">
-          {/* Left: Text Content */}
+        <header className="hero block md:flex items-center justify-between">
+          {/* Text Section */}
           <motion.div
             className="w-full md:w-1/2 text-left"
             initial="hidden"
             animate="show"
             variants={{
               hidden: {},
-              show: {
-                transition: {
-                  staggerChildren: 0.25,
-                },
-              },
+              show: { transition: { staggerChildren: 0.25 } },
             }}
           >
             <motion.h1
-              variants={{
-                hidden: { opacity: 0, y: 30 },
-                show: { opacity: 1, y: 0 },
-              }}
+              id="hero-heading"
+              variants={{ hidden: { opacity: 0, y: 30 }, show: { opacity: 1, y: 0 } }}
               transition={{ duration: 0.8 }}
               className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 leading-snug lg:leading-tight pt-20 md:pt-32"
             >
               Ife Oluwatosin
             </motion.h1>
 
-            <motion.h3
-              variants={{
-                hidden: { opacity: 0, y: 30 },
-                show: { opacity: 1, y: 0 },
-              }}
+            <motion.h2
+              variants={{ hidden: { opacity: 0, y: 30 }, show: { opacity: 1, y: 0 } }}
               transition={{ duration: 0.8 }}
               className="text-md sm:text-lg md:text-xl text-gray-600 mb-4"
             >
               Competence | Character
-            </motion.h3>
+            </motion.h2>
 
             <motion.p
-              variants={{
-                hidden: { opacity: 0, y: 30 },
-                show: { opacity: 1, y: 0 },
-              }}
+              variants={{ hidden: { opacity: 0, y: 30 }, show: { opacity: 1, y: 0 } }}
               transition={{ duration: 0.8 }}
               className="text-base sm:text-lg md:text-xl text-gray-700 mb-6 mr-5 max-w-xl mx-auto lg:mx-0"
             >
               I help businesses{" "}
-              <span className="font-semibold theme-highlight">thrive</span> by
-              creating web applications
-              <br className="hidden md:block" /> that are fast, scalable, and
-              loved by customers.
+              <strong className="theme-highlight">thrive</strong> by building
+              <br className="hidden md:block" />
+              fast, scalable, and customer-loved web applications.
             </motion.p>
 
-            {/* Social Links Section */}
-            <div className="flex gap-4 mb-6">
-              {/* LinkedIn */}
+            {/* Social Links */}
+            <nav aria-label="Social media" className="flex gap-4 mb-6">
               <a
                 href="https://www.linkedin.com/in/ife-oluwatosin-40155b7b/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xl md:text-3xl  theme-navbar-background hover:opacity-80 transition"
-                aria-label="LinkedIn Profile"
+                className="text-xl md:text-3xl theme-navbar-background hover:opacity-80 transition"
+                aria-label="LinkedIn"
               >
                 <FaLinkedin />
               </a>
-
-              {/* Email */}
               <a
                 href="mailto:ifeoluwatosin.official@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xl md:text-3xl  theme-navbar-background hover:opacity-80 transition"
-                aria-label="Email Address"
+                className="text-xl md:text-3xl theme-navbar-background hover:opacity-80 transition"
+                aria-label="Email"
               >
                 <FaEnvelope />
               </a>
-
-              {/* GitHub */}
               <a
                 href="https://github.com/ifetosin"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xl md:text-3xl  theme-navbar-background hover:opacity-80 transition"
-                aria-label="GitHub Profile"
+                className="text-xl md:text-3xl theme-navbar-background hover:opacity-80 transition"
+                aria-label="GitHub"
               >
                 <FaGithub />
               </a>
-            </div>
+            </nav>
+
+            {/* CTA Buttons */}
             <motion.div
               variants={{
                 hidden: { opacity: 0, scale: 0.95 },
@@ -103,51 +89,44 @@ export const Hero = () => {
               transition={{ duration: 0.8 }}
               className="text-left"
             >
-              <div className="flex md:flex-row gap-4 justify-left items-center">
-                {/* Explore My Work Button */}
+              <div className="flex md:flex-row gap-4 items-center">
                 <ScrollLink
                   to="projects"
-                  smooth={true}
+                  smooth
                   duration={500}
                   className="hover:opacity-90 cursor-pointer"
+                  aria-label="Scroll to Projects"
                 >
                   <motion.button
-                    rel="noopener noreferrer"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="theme-highlight font-semibold cursor-pointer transition"
+                    className="theme-highlight font-semibold transition"
                   >
-                    <span className="block sm:hidden">My Work</span>{" "}
-                    {/* Text for mobile */}
-                    <span className="hidden sm:block">
-                      Explore My Work
-                    </span>{" "}
-                    {/* Text for larger screens */}
+                    <span className="block sm:hidden">My Work</span>
+                    <span className="hidden sm:block">Explore My Work</span>
                   </motion.button>
                 </ScrollLink>
 
-                {/* View Resume */}
-                <div>
-                  <a
-                    href="https://drive.google.com/file/d/1UyfHdZ-JlD4KQmGMZIreEwLuRTrQInPm/view"
-                    target="_blank"
+                <a
+                  href="https://drive.google.com/file/d/1UyfHdZ-JlD4KQmGMZIreEwLuRTrQInPm/view"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View Resume on Google Drive"
+                >
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="theme-highlight font-semibold transition"
                   >
-                    <motion.button
-                      rel="noopener noreferrer"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="theme-highlight font-semibold cursor-pointer transition"
-                    >
-                      View Resume
-                    </motion.button>
-                  </a>
-                </div>
+                    View Resume
+                  </motion.button>
+                </a>
               </div>
             </motion.div>
           </motion.div>
 
-          {/* Right: About Box */}
-          <motion.div
+          {/* Right Section */}
+          <motion.aside
             className="w-full md:w-1/2 flex items-center justify-start"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -160,22 +139,21 @@ export const Hero = () => {
               </h2>
               <p className="text-gray-600 text-sm sm:text-base md:text-lg md:text-justify">
                 I build scalable, user-centric and high-performing web
-                applications. With expertise in HTML, CSS, Javascript, React,
+                applications. With expertise in HTML, CSS, JavaScript, React,
                 Next.js, and TypeScript, I’ve developed and optimized digital
-                platforms relied on by thousands daily.{" "}
-                <br className="hidden md:block" />I create fast, responsive
-                front-end solutions that improve performance, increase user
-                retention, and drive business growth across industries. Beyond
-                development, I mentor junior engineers, helping them become
-                impactful team contributors. I also excel at collaborating with
-                vendors, consultants, and cross-functional teams to deliver
-                complex projects. With strong emotional intelligence,
-                <br className="hidden md:block" /> I align teams and navigate
-                stakeholder relationships efficiently to drive success.
+                platforms relied on by thousands daily.
+                <br className="hidden md:block" />
+                I create fast, responsive front-end solutions that improve
+                performance, increase user retention, and drive business growth
+                across industries.
+                <br className="hidden md:block" />
+                I also mentor junior engineers and collaborate across teams to
+                deliver impactful products, using emotional intelligence and
+                leadership to ensure success.
               </p>
             </div>
-          </motion.div>
-        </div>
+          </motion.aside>
+        </header>
       </div>
     </section>
   );

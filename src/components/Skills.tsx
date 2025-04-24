@@ -1,3 +1,4 @@
+"use client";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useState } from "react";
 
@@ -5,18 +6,18 @@ export const Skills = () => {
   const { scrollYProgress } = useScroll();
   const [isLargeUp, setIsLargeUp] = useState(false);
 
-  // Initialize mediaQuery and handle change before using hooks
+  // Media query for large screens
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 1024px)"); // lg breakpoint
+    const mediaQuery = window.matchMedia("(min-width: 1024px)");
     const handleChange = () => setIsLargeUp(mediaQuery.matches);
 
-    handleChange(); // Initial check
+    handleChange(); // Initial run
     mediaQuery.addEventListener("change", handleChange);
 
     return () => mediaQuery.removeEventListener("change", handleChange);
   }, []);
 
-  // Always call hooks in the same order
+  // Horizontal scroll animations based on screen size
   const xFirstLine = useTransform(scrollYProgress, [0, 1], isLargeUp ? ["-20%", "20%"] : ["0%", "0%"]);
   const xSecondLine = useTransform(scrollYProgress, [0, 1], isLargeUp ? ["10%", "-50%"] : ["0%", "0%"]);
   const xThirdLine = useTransform(scrollYProgress, [0, 1], isLargeUp ? ["-20%", "20%"] : ["0%", "0%"]);
@@ -28,7 +29,7 @@ export const Skills = () => {
   return (
     <div className="w-full overflow-hidden max-w-[100vw]">
       <section className="relative w-full space-y-8 px-4 py-10 md:py-14">
-        {/* First Line */}
+        {/* First Skill Line */}
         <motion.div
           className="w-full text-lg sm:text-xl md:text-3xl lg:text-5xl font-bold whitespace-normal lg:whitespace-nowrap"
           style={{ x: xFirstLine }}
@@ -39,7 +40,7 @@ export const Skills = () => {
           </span>
         </motion.div>
 
-        {/* Second Line */}
+        {/* Second Skill Line */}
         <motion.div
           className="w-full text-lg sm:text-xl md:text-3xl lg:text-5xl font-bold whitespace-normal lg:whitespace-nowrap"
           style={{ x: xSecondLine }}
@@ -50,7 +51,7 @@ export const Skills = () => {
           </span>
         </motion.div>
 
-        {/* Third Line */}
+        {/* Third Skill Line */}
         <motion.div
           className="w-full text-lg sm:text-xl md:text-3xl lg:text-5xl font-bold whitespace-normal lg:whitespace-nowrap"
           style={{ x: xThirdLine }}
