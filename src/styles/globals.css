@@ -213,7 +213,8 @@ html.theme-default .theme-highlight {
 }
 
 html.theme-dark .theme-highlight {
-  color: #e0e0e0;
+  color: #90caf9;
+  ;
 }
 
 html.theme-buoyant .theme-highlight {
