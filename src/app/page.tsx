@@ -107,7 +107,7 @@ export default function PortfolioPage() {
             isNavOpen ? "ml-70" : "ml-0"
           }`}
         >
-          <section id="hero" className="px-4 pt-8 md:px-9 2xl:px-0 md:pt-16 lg:pt-30 lg:pb-20">
+          <section id="hero" className="px-4 pt-8 md:px-9 2xl:px-0 md:pt-16 lg:pt-30 lg:pb-5">
             <Hero />
           </section>
           <section

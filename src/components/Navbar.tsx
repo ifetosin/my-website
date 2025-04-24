@@ -77,7 +77,7 @@ export const Navbar: React.FC<NavbarProps> = ({ isNavOpen, setIsNavOpen }) => {
         </ScrollLink>
 
         {/* Navigation Links */}
-        <div className="flex flex-col px-2 md:px-6 lg:px-3 xl:px-0 space-y-6 mt-6">
+        <div className="flex flex-col px-6 space-y-6 mt-6">
           <ScrollLink
             to="projects"
             smooth={true}

@@ -26,7 +26,7 @@ export const Hero = () => {
                 show: { opacity: 1, y: 0 },
               }}
               transition={{ duration: 0.8 }}
-              className="text-3xl md:text-4xl lg:text-6xl font-bold mb-4 leading-snug lg:leading-tight mt-4"
+              className="text-3xl md:text-4xl lg:text-6xl font-bold mb-4 leading-snug lg:leading-tight mt-10 md:mt-4"
             >
               Ife Oluwatosin
             </motion.h1>
@@ -48,7 +48,7 @@ export const Hero = () => {
                 show: { opacity: 1, y: 0 },
               }}
               transition={{ duration: 0.8 }}
-              className="w-full md:w-3/4 text-base sm:text-lg md:text-xl mb-6 mr-5 mx-auto lg:mx-0"
+              className="w-full lg:w-3/4 text-base sm:text-lg md:text-xl mb-6 mr-5 mx-auto lg:mx-0"
             >
               I help businesses{" "}
               <strong className="theme-highlight">thrive</strong> by building
@@ -93,7 +93,7 @@ export const Hero = () => {
               transition={{ duration: 0.8 }}
               className="text-left mt-5"
             >
-              <div className="flex md:flex-row gap-4 items-center">
+              <div className="flex md:flex-row gap-4 items-center mb-6">
                 <ScrollLink
                   to="projects"
                   smooth
@@ -137,7 +137,7 @@ export const Hero = () => {
             transition={{ duration: 1 }}
           >
             <div className="md:p-6 w-full max-w-lg text-left">
-              <h2 className="text-xl md:text-3xl lg:text-4xl font-semibold mb-2">
+              <h2 className="text-xl md:text-3xl  font-semibold mb-2">
                 Senior Front-End Developer
               </h2>
               <h3 className="text-md md:text-xl lg:text-2xl font-semibold mb-3">

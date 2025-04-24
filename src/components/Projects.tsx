@@ -78,7 +78,7 @@ export const Projects = () => {
 
               <div className="flex flex-wrap" aria-label="Technology stack">
                 {project.stack.map((tech, i) => (
-                  <motion.span
+                  <motion.button
                     key={tech.name + i}
                     className="px-3 py-2 mr-2 mb-2 rounded-lg shadow-md text-sm"
                     initial={{ scale: 0.8, opacity: 0 }}
@@ -86,7 +86,7 @@ export const Projects = () => {
                     transition={{ duration: 0.6, delay: i * 0.2 }}
                   >
                     {tech.name}
-                  </motion.span>
+                  </motion.button>
                 ))}
               </div>
             </div>
