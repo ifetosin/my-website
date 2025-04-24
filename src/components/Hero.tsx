@@ -141,18 +141,17 @@ export const Hero = () => {
                 Senior Front-End Developer <br /> 6+ Years | Banking | Fintech |
                 EdTech
               </h2>
-              <p className="text-sm sm:text-base md:text-lg lg:text-justify">
+              <p className="text-base lg:text-left mb-4">
                 I build reliable, user-centric, and high-performing web
                 applications. With proficiency in HTML, CSS, JavaScript, React,
                 Next.js, and TypeScript, I’ve developed digital platforms
-                trusted by thousands. I create responsive front-end solutions
-                that provide exceptional user experiences and drive measurable
-                business growth. Beyond development, I mentor junior engineers
-                to become impactful team contributors. I thrive in working with
-                vendors, consultants, and cross-functional teams to deliver
-                complex projects. Leveraging emotional intelligence, I align
-                teams and maintain strong stakeholder relationships to achieve
-                success{" "}
+                trusted by thousands.
+              </p>
+              <p className="text-base lg:text-left">
+                Beyond development, I mentor junior engineers to become
+                impactful team contributors. I thrive in working with vendors,
+                consultants, and cross-functional teams to deliver complex
+                projects.
               </p>
             </div>
           </motion.aside>
