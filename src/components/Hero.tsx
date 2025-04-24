@@ -112,9 +112,10 @@ export const Hero = () => {
                   className="hover:opacity-90 cursor-pointer"
                 >
                   <motion.button
+                    rel="noopener noreferrer"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="w-full sm:w-auto py-4 px-6 rounded-lg shadow-lg font-semibold theme-highlight text-center text-base transition"
+                    className="theme-highlight font-semibold cursor-pointer transition"
                   >
                     <span className="block sm:hidden">My Work</span>{" "}
                     {/* Text for mobile */}

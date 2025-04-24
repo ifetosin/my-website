@@ -25,10 +25,12 @@ export const ThemeMenu = forwardRef<HTMLDivElement, ThemeMenuProps>(
           fontFamily: "var(--font-family)",
           backgroundColor: "var(--theme-border-color)",
           border: "1px solid var(--theme-border-color)",
-          zIndex: "50"
+          zIndex: "50",
         }}
       >
-        <h2 className="text-lg font-bold mb-2 theme-navbar-background">Choose Theme</h2>
+        <h2 className="text-lg font-bold mb-2 theme-navbar-background">
+          Choose Theme
+        </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
           {themes.map(({ name, theme: t }) => (
             <button

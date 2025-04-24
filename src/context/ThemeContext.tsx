@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { createContext, useState, useContext, ReactNode, useEffect } from 'react';
+import { createContext, useState, useContext, ReactNode, useEffect } from "react";
 
 interface ThemeContextProps {
   theme: string;
@@ -9,29 +9,25 @@ interface ThemeContextProps {
 
 const ThemeContext = createContext<ThemeContextProps | undefined>(undefined);
 
-export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  // Check if there's a saved theme in localStorage; if not, default to "fav"
-  const savedTheme = typeof window !== "undefined" ? localStorage.getItem("theme") : null;
-  const initialTheme = savedTheme || 'fav'; // Default to 'fav' if no saved theme
-  
-  const [theme, setTheme] = useState(initialTheme);
+export const ThemeProvider: React.FC<{ children: ReactNode }> = ({
+  children,
+}) => {
+  const defaultTheme = "default"; // Set your default theme here
+  const [theme, setTheme] = useState<string>(defaultTheme);
 
+  // On initial load, check if a theme is saved in localStorage, otherwise apply default
   useEffect(() => {
-    // Apply the theme to the document element
-    const root = document.documentElement;
-    root.className = '';  // Remove any existing theme classes
-    root.classList.add(`theme-${theme}`);  // Add the new theme class (e.g., theme-fav, theme-dark)
-    
-    // Save the selected theme in localStorage
-    if (typeof window !== "undefined") {
-      localStorage.setItem('theme', theme);
-    }
-  }, [theme]);
+    const savedTheme = localStorage.getItem("theme") || defaultTheme;
+    setTheme(savedTheme); // Apply the theme
+    document.documentElement.className = `theme-${savedTheme}`; // Set <html> class
+  }, []); // Empty dependency array means this only runs on mount
 
   const toggleTheme = (newTheme: string) => {
-    setTheme(newTheme); // Update the theme state
+    setTheme(newTheme); // Set the new theme
+    localStorage.setItem("theme", newTheme); // Save the theme to localStorage
+    document.documentElement.className = `theme-${newTheme}`; // Update <html> class
   };
-  
+
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       {children}
@@ -42,7 +38,7 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
 export const useTheme = () => {
   const context = useContext(ThemeContext);
   if (!context) {
-    throw new Error('useTheme must be used within a ThemeProvider');
+    throw new Error("useTheme must be used within a ThemeProvider");
   }
   return context;
 };

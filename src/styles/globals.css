@@ -7,15 +7,11 @@ body {
   margin: 0;
   padding: 0;
   background: var(--background);
-  color: #333333; /* Uniform text color across themes */
-  font-family: var(--font-family); /* Dynamic font application */
+  color: #333333; 
+  font-family: var(--font-family); 
   overflow-x: hidden;
 }
 
-html,
-body {
-  transition: background-color 0.3s ease, color 0.3s ease, font-family 0.3s ease;
-}
 
 /* Global Navbar Styling */
 .navbar {
@@ -28,12 +24,16 @@ body {
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/*(Default Theme) */
-html.theme {
-  --background: #faf9f6; /* Off-white background */
-  --foreground: #333333; /* Neutral dark text */
-  --font-family: "Montserrat", sans-serif;
+.favicon {
+  color: #333333; 
 }
+
+
+html,
+body {
+  transition: background-color 0.3s ease, color 0.3s ease, font-family 0.3s ease;
+}
+
 
 html.theme-default {
   background-color: var(--background);
@@ -41,23 +41,21 @@ html.theme-default {
   font-family: var(--font-family);
   --theme-border-color: #81d4fa;
   --theme-shadow:  0 0 0 2px rgba(129, 212, 250, 0.4);
-  --theme-navbar-background: #fff; /* Pure white for distinction */
-  --theme-navbar-shadow: 0px 4px 8px rgba(129, 212, 250, 0.4); /* Soft blue shadow */
-}
-
-.favicon {
-  color: #333333; /* Example red color */
+  --theme-navbar-background: #fffff; 
+  --theme-navbar-shadow: 0px 4px 8px rgba(129, 212, 250, 0.4);
+  --font-family: "Montserrat", sans-serif;
 }
 
 html.theme-default button {
-  background-color: #faf9f6; /* Matches the off-white background */
-  color: #01579b; /* Button text with neutral blue */
+  background-color: #faf9f6;
+  color: #01579b; 
   border: 1px solid #81d4fa;
   padding: 8px 16px;
   border-radius: 4px;
   transition: background-color 0.3s ease, transform 0.2s ease;
   cursor: pointer;
 }
+
 
 html.theme-default button:hover {
   background-color: #e3e3e3; /* Subtle hover effect */

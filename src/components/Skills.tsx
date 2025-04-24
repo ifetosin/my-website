@@ -1,5 +1,3 @@
-"use client";
-
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useState } from "react";
 
@@ -7,6 +5,7 @@ export const Skills = () => {
   const { scrollYProgress } = useScroll();
   const [isLargeUp, setIsLargeUp] = useState(false);
 
+  // Initialize mediaQuery and handle change before using hooks
   useEffect(() => {
     const mediaQuery = window.matchMedia("(min-width: 1024px)"); // lg breakpoint
     const handleChange = () => setIsLargeUp(mediaQuery.matches);
@@ -17,6 +16,7 @@ export const Skills = () => {
     return () => mediaQuery.removeEventListener("change", handleChange);
   }, []);
 
+  // Always call hooks in the same order
   const xFirstLine = useTransform(scrollYProgress, [0, 1], isLargeUp ? ["-20%", "20%"] : ["0%", "0%"]);
   const xSecondLine = useTransform(scrollYProgress, [0, 1], isLargeUp ? ["10%", "-50%"] : ["0%", "0%"]);
   const xThirdLine = useTransform(scrollYProgress, [0, 1], isLargeUp ? ["-20%", "20%"] : ["0%", "0%"]);
