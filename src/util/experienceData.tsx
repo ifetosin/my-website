@@ -7,10 +7,10 @@ export const experienceData = [
         "I lead the front-end team in designing and building scalable and engaging applications. I focus on ensuring seamless user interactions, maintaining brand consistency across platforms, and implementing solutions that drive both product usability and growth.",
       achievements: [
         <>
-          Led the development and implementation of responsive web applications using Next.js React TypeScript and React Redux ensuring optimal user experience across devices.
+          Led the development and implementation of responsive web applications using Next.js React TypeScript ensuring optimal user experience across devices.
         </>,
         <>
-          Optimized cross-browser compatibility and enhanced website performance improving load times SEO and efficiency leading to better user engagement.
+          Optimized cross-browser compatibility and enhanced website performance
         </>,
         <>
           Integrated REST APIs to improve data flow and deliver a dynamic responsive front-end experience.
@@ -22,13 +22,13 @@ export const experienceData = [
           Successfully developed the Ladda Website and the Ladda Financial Health Check Application boosting traffic and increasing user satisfaction.
         </>,
         <>
-          Created dynamic and reusable email templates for major projects ensuring consistency across communication channels for the Ladda Website Money Africa Website and Financial Health.
+          Created dynamic and reusable email templates for major projects ensuring consistency across communication channels for the Ladda app, Money Africa app and Money Af Kids App.
         </>,
         <>
-          Launched event and promotion websites delivering high-quality results within deadlines and budgets.
+          Implemented event and promotion websites delivering high-quality results.
         </>,
         <>
-          Collaborated with team members and clients aligning business goals with technical solutions to drive project success.
+          Collaborated with team members and supported clients aligning business goals with technical solutions to drive project success.
         </>,
       ],
     },
@@ -40,7 +40,7 @@ export const experienceData = [
         "I developed modern interfaces for web applications and contributed to digital projects that enhanced operational productivity in the financial space.",
       achievements: [
         <>
-          Implemented responsive web applications using Next.js React TypeScript and React Redux to deliver user-friendly digital solutions.
+          Implemented responsive web applications using React TypeScript and React Redux to deliver user-friendly digital solutions.
         </>,
         <>
           Integrated REST APIs to enhance the interactivity and data-driven features of applications.
@@ -69,11 +69,11 @@ export const experienceData = [
         <>
           Created a solution that streamlined the process for collecting business debit cards reducing delays and enhancing the customer experience.
         </>,
+         <>
+         Implemented cost-saving solutions by automating manual processes within the bank driving operational efficiency.
+       </>,
         <>
-          Worked closely with product designers back-end developers project managers and business owners to implement innovative solutions for banking operations.
-        </>,
-        <>
-          Implemented cost-saving solutions by automating manual processes within the bank driving operational efficiency.
+          Worked closely with product designers, back-end developers, project managers, and project owners to implement innovative solutions for banking operations.
         </>,
       ],
     },
