@@ -83,7 +83,7 @@ export default function PortfolioPage() {
         <header>
           {/* Navbar Toggle Icon */}
           {!isNavOpen && (
-            <div
+            <button
               className="nav-icon fixed top-4 left-4 z-50 p-4 rounded-full shadow-lg cursor-pointer transition hover:scale-105"
               style={{
                 backgroundColor: "var(--theme-navbar-background)",
@@ -92,7 +92,7 @@ export default function PortfolioPage() {
               aria-label="Open Navigation"
             >
               <FaBars className="theme-highlight text-2xl" />
-            </div>
+            </button>
           )}
 
           {/* Sidebar Navbar */}
