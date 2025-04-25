@@ -112,7 +112,7 @@ export const Hero = () => {
                 </ScrollLink>
 
                 <a
-                  href="https://drive.google.com/file/d/1UyfHdZ-JlD4KQmGMZIreEwLuRTrQInPm/view"
+                  href="https://drive.google.com/file/d/18cnD70UeuHaQIEbmNoC82P0QU7RLZK8B/view"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="View Resume on Google Drive"
