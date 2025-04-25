@@ -58,7 +58,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         
         {/* Favicon */}
-        <link rel="icon" type="image/svg+xml" href="/logo.svg" className="favicon" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" className="favicon" />
         
         {/* Preconnect for external resources */}
         <link rel="preconnect" href="https://fonts.gstatic.com" />

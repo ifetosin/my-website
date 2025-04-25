@@ -1,0 +1,23 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 100 100"
+  width="100"
+  height="100"
+>
+  <!-- Optional: Background square -->
+  <rect width="100" height="100" rx="20" fill="#ffffff" />
+
+  <!-- Fused double-C logo -->
+  <path
+    d="M60 20 A30 30 0 0 0 60 80"
+    fill="none"
+    stroke="#333333"
+    stroke-width="10"
+  />
+  <path
+    d="M40 20 A30 30 0 0 1 40 80"
+    fill="none"
+    stroke="#333333"
+    stroke-width="10"
+  />
+</svg>
