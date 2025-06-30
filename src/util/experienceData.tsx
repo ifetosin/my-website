@@ -13,6 +13,8 @@ export const experienceData = [
           Optimized cross-browser compatibility and enhanced website performance
         </>,
         <>
+        Implemented admin platform features to manage courses, handle discounts, and resolve payment errors</>,
+        <>
           Integrated REST APIs to improve data flow and deliver a dynamic responsive front-end experience.
         </>,
         <>
@@ -22,7 +24,7 @@ export const experienceData = [
           Successfully developed the Ladda Website and the Ladda Financial Health Check Application boosting traffic and increasing user satisfaction.
         </>,
         <>
-          Created dynamic and reusable email templates for major projects ensuring consistency across communication channels for the Ladda app, Money Africa app and Money Af Kids App.
+          Created dynamic and reusable email templates for major projects ensuring consistency across communication channels for the Ladda app, Money Africa app and Money Africa Kids App.
         </>,
         <>
           Implemented event and promotion websites delivering high-quality results.

@@ -33,7 +33,7 @@ export const projects = [
       "A fintech company's official website, designed to represent its brand and mission. It highlights the features of the mobile application, providing users with insights into its capabilities for savings and investments while linking directly to the app for easy access and downloads.",
     url: "https://www.getladda.com/",
     image:
-      "https://res.cloudinary.com/dufn9ayp9/image/upload/v1745455387/My%20Portfolio/laddawebp.webp",
+      "https://res.cloudinary.com/dufn9ayp9/image/upload/v1751285569/My%20Portfolio/laddapng.png",
     stack: [
       { name: "React"},
       { name: "Typescript"},
